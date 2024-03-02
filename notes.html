@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Audio Player</title>
+</head>
+<body>
+  <button id="audioButton4">Play/Pause</button>
+
+  <audio id="audio4" src="Audio/Lowkey.mp3"></audio>
+
+  <script>
+    const audioButton4 = document.getElementById("audioButton4");
+    const audio4 = document.getElementById("audio4");
+   
+    
+  let isAudio4Playing = false;
+
+  audioButton4.addEventListener("click", function() {
+    if (isAudio4Playing) {
+      audio4.pause();
+      isAudio3Playing = false;
+    } else {
+      audio4.play();
+      isAudio4Playing = true;
+    }
+  });
+
+</script>
+
+
+ 
+  </script>
+</body>
+</html>
+
+video
+{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    outline: none;
+}
+

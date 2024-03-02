@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styleu.css">
+    <title>JOJI</title>
+    <style>
+    .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 600px;
+    background: transparent;
+    box-shadow: 0 20px 30px #efb9d9;
+    animation: transitionIn 0.75s;
+}
+
+.container .slide .item{
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #ffcaea;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+    animation: 0.7s;
+    
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2){
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.slide .item:nth-child(3){
+    left: 50%;
+}
+.slide .item:nth-child(4){
+    left: calc(50% + 220px);
+}
+.slide .item:nth-child(5){
+    left: calc(50% + 440px);
+}
+
+/* here n = 0, 1, 2, 3,... */
+.slide .item:nth-child(n + 6){
+    left: calc(50% + 660px);
+    opacity: 0;
+}
+
+
+
+.item .content{
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    width: 300px;
+    text-align: left;
+    color: #eee;
+    transform: translate(0, -50%);
+    font-family: system-ui;
+    display: none;
+}
+
+
+.slide .item:nth-child(2) .content{
+    display: block;
+}
+
+
+.content .name{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+}
+
+.content .des{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content button{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+
+@keyframes animate {
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes moveElement {
+    from {
+        margin-bottom: 600px;
+    }
+    to {
+        margin-top: 5px;
+    }
+}
+
+@keyframes transitionIn{
+  from{
+    opacity: 0;
+    transform: rotateX('-10deg');
+  }
+  to{
+    opacity: 1;
+    transform: rotateX('0');
+  }
+}
+
+.name{
+    color: azure;
+}
+
+.des{
+    color: azure;
+}
+
+.button{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+.button button{
+    width: 40px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: 0.3s;
+}
+
+.button button:hover{
+    background: #ff83ce;
+    color: #fff;
+
+   
+}
+    </style>
+    <body>
+        <nav>
+            <div class="logo">JOJI</div>
+            <ul class="nav-list">
+                 <li><a href="main.html">HOME</a></li> 
+                 <li><a href="about.html">ABOUT</a></li>
+                 <li><a href="albums.html">SONGS</a></li>
+                <li><a href="Mvs.html">MUSIC VIDEOS</a></li>
+            </ul>
+            <div class="links">
+                    <a href="https://www.youtube.com/@joji"><i class="fa fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/sushitrash/?hl=en"><i class="fa fa-instagram"></i></a>
+                    <a href="https://open.spotify.com/artist/3MZsBdqDrRTJihTHQrO6Dq"><i class="fa fa-spotify"></i></a>
+              
+            </div>
+        </nav>
+    </body>
+    <br>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+<div class="container">
+
+    <div class="slide">
+
+        
+        <div class="item" style="background-image: url(Covers/500x500.jpeg);">
+            <div class="content">
+                <div class="name">Gimme Love</div>
+                <div class="des">The third single from Joji's second studio album NECTAR.</div>
+                <button id="audioButton1">Play/Pause (Gimme Love)</button>
+
+                <audio id="audio1" src="Audio/Joji - Gimme Love (Official Video) [TubeRipper.com].mp3"></audio>
+              
+                <script>
+                  const audioButton1 = document.getElementById("audioButton1");
+                  const audio1 = document.getElementById("audio1");
+                 
+                  
+                let isAudio1Playing = false;
+              
+                audioButton1.addEventListener("click", function() {
+                  if (isAudio1Playing) {
+                    audio1.pause();
+                    isAudio1Playing = false;
+                  } else {
+                    audio1.play();
+                    isAudio1Playing = true;
+                  }
+                });
+              
+              </script>
+               
+            </div>
+        </div>
+        <div class="item" style="background-image: url(Covers/downtown.jpeg);">
+            <div class="content">
+                <div class="name">Slow Dancing in the Dark</div>
+                <div class="des">A song from his debut album Ballads 1</div>
+                <button id="audioButton2">Play/Pause (Slow dancing in the dark)</button>
+
+                <audio id="audio2" src="Audio/Joji - SLOW DANCING IN THE DARK.mp3"></audio>
+              
+                <script>
+                  const audioButton2 = document.getElementById("audioButton2");
+                  const audio2 = document.getElementById("audio2");
+                 
+                  
+                let isAudio2Playing = false;
+              
+                audioButton2.addEventListener("click", function() {
+                  if (isAudio2Playing) {
+                    audio2.pause();
+                    isAudio2Playing = false;
+                  } else {
+                    audio2.play();
+                    isAudio2Playing = true;
+                  }
+                });
+              
+              </script>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(Covers/lowkey.png);">
+            <div class="content">
+                <div class="name">Die for you</div>
+                <div class="des">One of the standout tracks from the album SMITHEREENS </div>
+                <button id="audioButton3">Play/Pause (Die for you)</button>
+
+                <audio id="audio3" src="Audio/Joji - Die For You.mp3"></audio>
+
+                <script>
+                  const audioButton3 = document.getElementById("audioButton3");
+                  const audio3 = document.getElementById("audio3");
+                 
+                  
+                let isAudio3Playing = false;
+              
+                audioButton3.addEventListener("click", function() {
+                  if (isAudio3Playing) {                 
+                    audio3.pause();
+                    isAudio3Playing = false;
+                  } else {
+                    audio3.play();
+                    isAudio3Playing = true;
+                    
+                  }
+                });
+              
+              </script>
+                
+            </div>
+        </div>
+        <div class="item" style="background-image: url(Covers/Moonchild_cover.png);">
+            <div class="content">
+                <div class="name">XNXX</div>
+                <div class="des">The 11th track from Joji's debut album BALLADS 1.</div> 
+                <button id="audioButton4">Play/Pause (XNXX)</button>
+
+                <audio id="audio4" src="Audio/XNXX - Joji.mp3"></audio>
+              
+                <script>
+                  const audioButton4 = document.getElementById("audioButton4");
+                  const audio4 = document.getElementById("audio4");
+                 
+                  
+                let isAudio4Playing = false;
+              
+                audioButton4.addEventListener("click", function() {
+                  if (isAudio4Playing) {
+                    audio4.pause();
+                    isAudio3Playing = false;
+                  } else {
+                    audio4.play();
+                    isAudio4Playing = true;
+                  }
+                });
+              
+              </script>
+            </div>
+        </div>
+        <div class="item" style="background-image: url(Covers/1.png);">
+            <div class="content">
+                <div class="name">Sanctuary</div>
+                <div class="des">The first single released by Joji following the release of Joji’s debut album BALLADS 1.</div>
+                 <button id="audioButton5">Play/Pause (Sanctuary) </button>
+
+                <audio id="audio5" src="Audio/Joji - Sanctuary _ Lyrics.mp3"></audio>
+              
+                <script>
+                  const audioButton5 = document.getElementById("audioButton5");
+                  const audio5 = document.getElementById("audio5");
+                 
+                  
+                let isAudio5Playing = false;
+              
+                audioButton5.addEventListener("click", function() {
+                  if (isAudio5Playing) {
+                    audio5.pause();
+                    isAudio5Playing = false;
+                  } else {
+                    audio5.play();
+                    isAudio5Playing = true;
+                  }
+                });
+              
+              </script>
+            </div>
+        </div>
+    </div>
+
+    <div class="button">
+        <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+    <script src="album.js"></script>
+
+</div>
+</html> 

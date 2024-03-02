@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styleu.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>JOJI Zefanya</title>
+    <body>
+        <nav>
+            <div class="logo">JOJI</div>
+            <ul class="nav-list">
+                 <li><a href="main.html">HOME</a></li> 
+                 <li><a href="about.html">ABOUT</a></li>
+                 <li><a href="albums.html">SONGS</a></li>
+                <li><a href="#">MUSIC VIDEOS</a></li>
+            </ul>
+            <div class="links">
+                    <a href="https://www.youtube.com/results?search_query=joji"><i class="fa fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/sushitrash/?hl=en"><i class="fa fa-instagram"></i></a>
+                    <a href="https://open.spotify.com/artist/3MZsBdqDrRTJihTHQrO6Dq"><i class="fa fa-spotify"></i></a>
+              
+            </div>
+        </nav>
+        <link rel="stylesheet" href="mvs.css">
+
+        <body oncontextmenu="return false">
+            <div class="container">
+                <div id="video_player">
+                    <video controls poster="MusicVids/" class="video" id="video" muted autoplay>
+                        <source src="MusicVids/Joji - XNXX (Music Video).mp4" type="video/mp4">
+                        <h3 class="title">JOJI - XNXX (Official Music Video) </h3>
+                    </video>
+                    <div class="scrollBox">
+                        <div class="box">
+                            <video src="MusicVids/Joji - SLOW DANCING IN THE DARK.mp4" muted></video>
+                            <div class="box-content">
+                                <h3 class="title">Joji - Slow Dancing in the Dark(Official Music Video)</h3>
+                                <a href="MusicVids/Joji - SLOW DANCING IN THE DARK.mp4" class="button">Watch</a>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <video src="MusicVids/Joji - Sanctuary (Official Video).mp4" muted></video>
+                            <div class="box-content">
+                                <h3 class="title">Joji - Sanctuary (Official Music Video)</h3>
+                                <a href="MusicVids/Joji - Sanctuary (Official Video).mp4" class="button">Watch</a>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <video src="MusicVids/Joji - Gimme Love (Official Video).mp4" muted></video>
+                            <div class="box-content">
+                                <h3 class="title">Joji - Gimme Love (Official Music Video)</h3>
+                                <a href="MusicVids/Joji - Gimme Love (Official Video).mp4" class="button">Watch</a>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <video src="MusicVids/Joji -  Glimpse of Us.mp4" muted></video>
+                            <div class="box-content">
+                                <h3 class="title">Joji - Glimpse of Us (Official Music Video)</h3>
+                                <a href="MusicVids/Joji -  Glimpse of Us.mp4" class="button">Watch</a>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <video src="MusicVids/Joji - Die For You .mp4" muted></video>
+                            <div class="box-content">
+                                <h3 class="title">Joji - Die For You (Official Music Video)</h3>
+                                <a href="MusicVids/Joji - Die For You .mp4" class="button">Watch</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <script type="text/javascript">
+                let anchors = document.querySelectorAll('.button');
+                let links = [...anchors];
+        
+                for (let i = 0; i < links.length; i++) {
+                    links[i].onclick = handler;
+                }
+        
+                function handler(e) {
+                    e.preventDefault();
+                    let videotarget = this.getAttribute("href");
+                    let filename = videotarget.substr(0, videotarget.lastIndexOf('.'));
+                    let video = document.getElementById("video");
+                    video.removeAttribute("poster");
+                    let source = video.querySelector('source');
+                    source.src = filename + ".mp4";
+                    video.load();
+                    video.play();
+                }
+            </script>
+        </body>
+    </html> 
